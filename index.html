@@ -123,6 +123,7 @@
                 }
             });
         }
+
         function move(dx, dy) {
     let newX = xperso + dx;
     let newY = yperso + dy;
@@ -132,13 +133,9 @@
             labyCoordinate[xperso][yperso] = b;
             xperso = newX;
             yperso = newY;
-
             if (labyCoordinate[xperso][yperso] === f) {
-                // Mettre à jour la position du personnage sur la case du trophée
                 labyCoordinate[xperso][yperso] = p;
                 affichage();
-
-                // Ajouter un léger délai avant d'afficher la popup
                 setTimeout(afficherPopupVictoire, 100);
             } else {
                 labyCoordinate[xperso][yperso] = p;
