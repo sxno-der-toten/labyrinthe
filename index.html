@@ -123,6 +123,35 @@
                 }
             });
         }
+        function move(dx, dy) {
+    let newX = xperso + dx;
+    let newY = yperso + dy;
+
+    if (newX >= 0 && newX < labyCoordinate.length && newY >= 0 && newY < labyCoordinate[0].length) {
+        if (labyCoordinate[newX][newY] !== m) {
+            labyCoordinate[xperso][yperso] = b;
+            xperso = newX;
+            yperso = newY;
+
+            if (labyCoordinate[xperso][yperso] === f) {
+                // Mettre à jour la position du personnage sur la case du trophée
+                labyCoordinate[xperso][yperso] = p;
+                affichage();
+
+                // Ajouter un léger délai avant d'afficher la popup
+                setTimeout(afficherPopupVictoire, 100);
+            } else {
+                labyCoordinate[xperso][yperso] = p;
+                affichage();
+            }
+        }
+    }
+}
+
+function afficherPopupVictoire() {
+    alert("Félicitations ! Vous avez gagné la partie !");
+}
+
     </script>
 </body>
 </html>
