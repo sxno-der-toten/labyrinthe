@@ -73,7 +73,7 @@ function move(dx, dy) {
 }
 
 function afficherPopupVictoire() {
-    alert("Félicitations ! Vous avez gagné la partie !");
+    alert("F\u00E9licitations ! Vous avez gagn\u00E9 la partie !");
 }
 
 function startGame() {
