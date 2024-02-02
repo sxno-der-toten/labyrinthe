@@ -1,0 +1,79 @@
+/* Reset CSS (optional) */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Your existing styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+td {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    width: 80px; 
+    height: 80px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 15px;
+    font-family:cursive;
+    font-size: 27px;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.instruction-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Ajouter une marge en bas pour séparer les deux parties */
+}
+
+.arrow-image {
+    width: 30px;
+    height: auto;
+    margin-right: 3px;
+}
+
+.restart-instruction {
+    display: flex;
+    align-items: center;
+}
+
+.container.gameStarted h2 {
+    display: none;
+}
+
+#startButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
